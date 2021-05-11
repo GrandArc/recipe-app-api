@@ -70,8 +70,8 @@ class PrivateIngredientsApiTests(TestCase):
         self.client.post(INGREDIENTS_URL, payload)
 
         exists = Ingredient.objects.filter(
-            user = self.user,
-            name = payload['name'],
+            user=self.user,
+            name=payload['name'],
         ).exists()
         self.assertTrue(exists)
 
